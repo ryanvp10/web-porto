@@ -1,6 +1,7 @@
-function Navbar () {
+import reactDom from 'react-dom';
+function NavbarContent () {
     return (
-        <div className="navbar">
+        <div className="navbar items-center">
             <div className="container px-5 py-3 mx-auto">
                 <div className="navbar-box flex justify-between items-center">
                 <a href="#" className="navbar-logo">MyPortfolio</a>
@@ -22,6 +23,17 @@ function Navbar () {
             </div>
         </div>
     )
+}
+
+function Navbar() {
+    const navbarRoot = document.getElementById('header');
+
+    if (!navbarRoot) {
+      return null;
+    }
+
+    return reactDom.createPortal(<NavbarContent />, navbarRoot);
+
 }
 
 export default Navbar;

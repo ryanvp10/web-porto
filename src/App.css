@@ -2,20 +2,15 @@
 @import "tailwindcss/preflight.css";
 @tailwind utilities;
 
-
-
-#navbar {
-  background-color: #15365F;
+#nav {
+  padding-top: 2%;
+  padding-left: 10%;
 }
 
 #root {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
-}
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
