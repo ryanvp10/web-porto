@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { label: 'Home', id: 'home' },
   { label: 'Projects', id: 'projects' },
   { label: 'About', id: 'about' },
-  { label: 'Guestbook', id: 'guestbook' },
+  { label: 'Bucket List', id: 'bucketlist' },
 ];
 
 export const PROJECTS = [

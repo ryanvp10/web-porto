@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, ArrowUpRight } from 'lucide-react';
+import { FolderRoot, ArrowUpRight} from 'lucide-react';
 import GlowCard from '../ui/glow-card.jsx';
 import { PROJECTS } from '../../data/content';
 
@@ -7,7 +7,7 @@ const FeaturedProjects = () => (
   <div className="space-y-8">
     <div className="flex items-center justify-between animate-fade-in">
       <h2 className="text-2xl font-bold text-gray-100 flex items-center gap-2">
-        <Code className="text-primary-400" size={24}/>
+        <FolderRoot className="text-primary-400" size={24}/>
         Featured Projects
       </h2>
       <a href="#" className="text-sm text-primary-400 hover:text-primary-300 hover:underline underline-offset-4">

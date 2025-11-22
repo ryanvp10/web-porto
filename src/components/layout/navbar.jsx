@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Menu, X } from 'lucide-react';
+import { Menu, X, Code} from 'lucide-react';
 import { NAV_LINKS } from '../../data/content';
 
 const Navbar = ({ activeTab, setActiveTab }) => {
@@ -20,13 +20,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
     >
       <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
         <div 
-          className="group flex cursor-pointer items-center gap-2 text-lg font-bold text-gray-100"
+          className="group flex cursor-pointer items-center gap-1 text-lg font-bold text-gray-100"
           onClick={() => setActiveTab('home')}
         >
-          <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500/20 text-primary-400 transition-transform group-hover:rotate-12">
-             <Terminal size={18} />
+          <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500/20 text-primary-400 transition-transform group-hover:scale-110">
+             <Code size={18} />
           </div>
-          <span>My<span className="text-gray-500">Portfolio</span></span>
+          <span>My<span className="pl-2 text-primary-400">Portfolio</span></span>
         </div>
 
         <div className="hidden md:flex space-x-1 rounded-full border border-gray-800 bg-gray-900/50 p-1 backdrop-blur-sm">

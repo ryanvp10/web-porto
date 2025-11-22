@@ -4,7 +4,7 @@ const Footer = () => (
   <footer className="border-t border-gray-800 mt-auto">
     <div className="mx-auto max-w-4xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <p className="text-sm text-gray-500">
-        © 2025 Christopher. Built with React & Tailwind.
+        © 2025 Ryan. Built with React & Tailwind.
       </p>
       <div className="flex items-center gap-2">
         <span className="relative flex h-2 w-2">

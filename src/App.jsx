@@ -11,13 +11,14 @@ import GlowCard from './components/ui/glow-card';
 
 // Data
 import { PROJECTS } from './data/content';
+import CustomCursor from './components/ui/custom-cursor';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
 
   return (
-    <div className="min-h-screen bg-black font-sans text-gray-200 selection:bg-primary-500/30 selection:text-primary-200 overflow-x-hidden">
-      
+    <div className="min-h-screen bg-black font-sans text-gray-200 selection:bg-primary-500/30 selection:text-primary-200 overflow-x-hidden cursor-default">
+      <CustomCursor />
       <div className="fixed inset-0 -z-10 h-full w-full bg-black">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         <div className="absolute inset-0 bg-linear-to-tr from-black via-black/90 to-transparent"></div>
@@ -61,7 +62,7 @@ const App = () => {
             <h1 className="text-3xl font-bold text-white mb-8">About Me</h1>
             <div className="prose prose-invert prose-gray animate-fade-up text-gray-400">
               <p className="text-lg text-gray-300 mb-6">
-                I'm Christopher, a developer who loves building things that live on the internet.
+                I'm Ryan Sapta, a developer who loves building things that live on the internet.
               </p>
               <div className="my-8 p-4 rounded-lg bg-gray-900/50 border border-gray-800">
                 <h3 className="text-white font-semibold mb-4 flex items-center gap-2"><Cpu size={18}/> Tech Stack</h3>
@@ -79,7 +80,7 @@ const App = () => {
         )}
 
         {/* You can create a similar component for Guestbook.jsx and import it */}
-        {activeTab === 'guestbook' && (
+        {activeTab === 'bucketlist' && (
           <div className="text-center text-gray-400 py-20">Guestbook Component Here</div>
         )}
 
