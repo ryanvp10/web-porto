@@ -2,43 +2,71 @@ import React from 'react';
 import { FolderRoot, ArrowUpRight} from 'lucide-react';
 import GlowCard from '../ui/glow-card.jsx';
 import { PROJECTS } from '../../data/content';
+import TechBadge from '../ui/techbadge.jsx';
+import FadeInWhenVisible from '../ui/fadein.jsx';
 
-const FeaturedProjects = () => (
+const FeaturedProjects = ({onProjectClick, onViewAllClick}) => (
   <div className="space-y-8">
-    <div className="flex items-center justify-between animate-fade-in">
+    <FadeInWhenVisible>
+    <div className="flex items-center justify-between">
       <h2 className="text-2xl font-bold text-gray-100 flex items-center gap-2">
         <FolderRoot className="text-primary-400" size={24}/>
-        Featured Projects
+        Recent <span className="text-primary-400">Projects</span>
       </h2>
-      <a href="#" className="text-sm text-primary-400 hover:text-primary-300 hover:underline underline-offset-4">
-        View all projects
-      </a>
+      <button 
+          onClick={onViewAllClick} 
+          className="cursor-pointer text-sm text-primary-400 hover:text-primary-300 hover:underline underline-offset-4"
+        >
+          View all projects
+        </button>
     </div>
+    </FadeInWhenVisible>
     
-    <div className="grid gap-4 sm:grid-cols-2">
-      {PROJECTS.slice(0, 2).map((project, idx) => (
-        <GlowCard key={idx} delay={project.delay} className="group flex h-full flex-col justify-between hover:border-gray-700 transition-colors duration-300">
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-100 group-hover:text-primary-300 transition-colors">
-                {project.title}
-              </h3>
-              <ArrowUpRight size={18} className="text-gray-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+   <div className="grid gap-4 sm:grid-cols-2 cursor-pointer">
+      {PROJECTS.slice(0, 4).map((project, idx) => {
+        return (
+          <FadeInWhenVisible key={idx} delay={project.delay}>
+          <GlowCard
+            onClick={()=> onProjectClick && onProjectClick(project)}
+            key={idx} 
+            delay={project.delay} 
+            className="group flex h-full flex-col justify-between hover:border-gray-700 transition-colors duration-300"
+          >
+            {/* Flex container for horizontal layout */}
+            <div className="flex gap-4"> 
+              {/* Image Placeholder on the Left */}
+              <div className="shrink-0">
+                <img 
+                  src={project.imageUrl} 
+                  alt={`${project.title} thumbnail`} 
+                  className="h-14 w-14 rounded-lg object-cover border border-gray-700/50 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Content on the Right */}
+              <div className="grow">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-lg font-semibold text-gray-100 group-hover:text-primary-300 transition-colors">
+                    {project.title}
+                  </h3>
+                  <ArrowUpRight size={18} className="text-gray-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                </div>
+                <p className="text-sm leading-relaxed text-gray-400 mb-4">
+                  {project.description}
+                </p>
+              </div>
             </div>
-            <p className="text-sm leading-relaxed text-gray-400 mb-6">
-              {project.description}
-            </p>
-          </div>
-          
-          <div className="flex flex-wrap gap-2">
-            {project.tech.map((t) => (
-              <span key={t} className="inline-flex items-center rounded-md bg-gray-800 px-2 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-700/50 transition-colors hover:bg-gray-700 hover:text-white">
-                {t}
-              </span>
-            ))}
-          </div>
-        </GlowCard>
-      ))}
+
+            {/* Tech stack badges using the new TechBadge component */}
+            <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t border-gray-800/50">
+              {project.tech.map((t) => (
+                <TechBadge key={t} name={t} />
+              ))}
+            </div>
+          </GlowCard>
+          </FadeInWhenVisible>
+        );
+      })}
     </div>
   </div>
 );

@@ -6,21 +6,34 @@ import Navbar from './components/layout/navbar';
 import Footer from './components/layout/footer';
 import Hero from './components/sections/hero';
 import FeaturedProjects from './components/sections/featured-projects';
-import BlogSection from './components/sections/blog-section';
 import GlowCard from './components/ui/glow-card';
-
+import ProjectDetail from './components/layout/projectdetail';
+import TechBadge from './components/ui/techbadge';
 // Data
 import { PROJECTS } from './data/content';
 import CustomCursor from './components/ui/custom-cursor';
+import FadeInWhenVisible from './components/ui/fadein';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
+  const [selectedProject, setSelectedProject] = useState(null);
+
+   const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setActiveTab('project-detail'); // Switch to a specialized view state
+    window.scrollTo(0, 0); // Scroll to top when navigating
+  };
+  
+  const handleViewAllClick = () => {
+    setActiveTab('projects');
+    window.scrollTo(0, 0); // Scroll to top when navigating
+  }
 
   return (
     <div className="min-h-screen bg-black font-sans text-gray-200 selection:bg-primary-500/30 selection:text-primary-200 overflow-x-hidden cursor-default">
       <CustomCursor />
       <div className="fixed inset-0 -z-10 h-full w-full bg-black">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
         <div className="absolute inset-0 bg-linear-to-tr from-black via-black/90 to-transparent"></div>
       </div>
 
@@ -29,12 +42,13 @@ const App = () => {
       <main className="mx-auto max-w-4xl px-6 pb-20 min-h-[80vh]">
         
         {activeTab === 'home' && (
-          <div key="home" className="flex flex-col gap-20">
+          <div key="home" className="flex flex-col gap-8">
             <Hero />
             <div className="border-t border-gray-800/50" />
-            <FeaturedProjects />
-            <div className="border-t border-gray-800/50" />
-            <BlogSection />
+            <FeaturedProjects 
+            onProjectClick={handleProjectClick}
+            onViewAllClick={handleViewAllClick}
+            />
           </div>
         )}
 
@@ -43,18 +57,30 @@ const App = () => {
             <h1 className="text-4xl font-bold text-white mb-8">All Projects</h1>
             <div className="grid gap-6 sm:grid-cols-2">
               {[...PROJECTS, ...PROJECTS].map((project, idx) => (
-                <GlowCard key={idx} delay={`${idx * 100}ms`} className="flex h-full flex-col hover:border-primary-500/30">
+                <FadeInWhenVisible key={idx} delay={`${idx * 100}ms`}>
+                <GlowCard key={idx} delay={`${idx * 100}ms`} onClick={()=> handleProjectClick(project)}
+                    className="flex h-full flex-col hover:border-primary-500/30">
                    <div className="mb-auto">
                      <h3 className="text-lg font-bold text-gray-100 mb-2">{project.title}</h3>
                      <p className="text-gray-400 text-sm">{project.description}</p>
                    </div>
-                   <div className="mt-6 flex gap-2 text-xs text-primary-300/80 font-mono">
-                     {project.tech.join(' • ')}
-                   </div>
+                   <div className="mt-6 flex gap-3">
+                       {project.tech.map((t) => (
+                          <TechBadge key={t} name={t} />
+                       ))}
+                     </div>
                 </GlowCard>
+                </FadeInWhenVisible>
               ))}
             </div>
           </div>
+        )}
+
+        {activeTab === 'project-detail' && selectedProject && (
+            <ProjectDetail 
+                project={selectedProject} 
+                onBack={() => setActiveTab('projects')} 
+            />
         )}
 
         {activeTab === 'about' && (
@@ -81,11 +107,10 @@ const App = () => {
 
         {/* You can create a similar component for Guestbook.jsx and import it */}
         {activeTab === 'bucketlist' && (
-          <div className="text-center text-gray-400 py-20">Guestbook Component Here</div>
+          <div className="text-center text-gray-400 py-20">Bucket List Component Here</div>
         )}
 
       </main>
-
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-const GlowCard = ({ children, className = "", delay = "0ms" }) => {
+const GlowCard = ({ children, className = "", onClick }) => {
   const divRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
@@ -17,8 +17,8 @@ const GlowCard = ({ children, className = "", delay = "0ms" }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
-      style={{ animationDelay: delay }}
-      className={`relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900/40 px-4 py-6 sm:px-6 animate-fade-up ${className}`}
+      onClick={onClick}
+      className={`relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900/40 px-4 py-6 sm:px-6 ${className}`}
     >
       <div
         className="pointer-events-none absolute -inset-px transition-opacity duration-300"

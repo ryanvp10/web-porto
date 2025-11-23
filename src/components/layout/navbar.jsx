@@ -26,7 +26,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500/20 text-primary-400 transition-transform group-hover:scale-110">
              <Code size={18} />
           </div>
-          <span>My<span className="pl-2 text-primary-400">Portfolio</span></span>
+          <span>My<span className="pl-1 text-primary-400">Portfolio</span></span>
         </div>
 
         <div className="hidden md:flex space-x-1 rounded-full border border-gray-800 bg-gray-900/50 p-1 backdrop-blur-sm">
@@ -34,7 +34,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             <button
               key={link.id}
               onClick={() => setActiveTab(link.id)}
-              className={`relative px-4 py-1.5 text-sm font-medium transition-colors duration-200 rounded-full ${
+              className={`relative px-4 py-1.5 text-sm font-medium transition-colors duration-200 rounded-full cursor-pointer ${
                 activeTab === link.id ? 'text-white' : 'text-gray-400 hover:text-gray-200'
               }`}
             >
