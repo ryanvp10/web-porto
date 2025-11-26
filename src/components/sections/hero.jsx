@@ -5,7 +5,7 @@ const Hero = () => (
   <div className="animate-fade-in min-h-[calc(100vh-100px)] justify-center items-center text-center flex flex-col">  
     <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
       Hi, I'm  
-      <span className="pl-2 animate-gradient-text bg-linear-to-r from-primary-300 via-blue-400 to-primary-300 bg-clip-text text-transparent bg-size-[200%_auto]"
+      <span className="pl-2 animate-gradient-text bg-linear-to-r from-primary-300 via-cyan-500 to-primary-300 bg-clip-text text-transparent bg-size-[200%_auto]"
       > Ryan Sapta</span>
     </h1>
     <p className="mb-8 max-w-2xl text-lg leading-relaxed text-gray-400">

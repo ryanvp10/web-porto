@@ -1,4 +1,4 @@
-import {Cpu } from 'lucide-react';
+import {Cpu} from 'lucide-react';
 
 const TechIcon = ({ name, className = 'w-6 h-6' }) => {
   // SVG paths for common technologies (simplified for inline use)

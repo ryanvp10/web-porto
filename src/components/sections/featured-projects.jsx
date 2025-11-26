@@ -4,14 +4,20 @@ import GlowCard from '../ui/glow-card.jsx';
 import { PROJECTS } from '../../data/content';
 import TechBadge from '../ui/techbadge.jsx';
 import FadeInWhenVisible from '../ui/fadein.jsx';
+import SketchyUnderline from '../ui/sketcyunderline.jsx';
 
 const FeaturedProjects = ({onProjectClick, onViewAllClick}) => (
   <div className="space-y-8">
     <FadeInWhenVisible>
     <div className="flex items-center justify-between">
-      <h2 className="text-2xl font-bold text-gray-100 flex items-center gap-2">
-        <FolderRoot className="text-primary-400" size={24}/>
-        Recent <span className="text-primary-400">Projects</span>
+      <h2 className="text-4xl font-bold text-gray-100 flex items-center gap-2">
+        <FolderRoot className="text-primary-400" size={28}/>
+        Recent
+        <SketchyUnderline>
+        <span className="text-primary-400">
+          Projects
+          </span>
+          </SketchyUnderline>
       </h2>
       <button 
           onClick={onViewAllClick} 
@@ -23,7 +29,7 @@ const FeaturedProjects = ({onProjectClick, onViewAllClick}) => (
     </FadeInWhenVisible>
     
    <div className="grid gap-4 sm:grid-cols-2 cursor-pointer">
-      {PROJECTS.slice(0, 4).map((project, idx) => {
+      {PROJECTS.slice(0, 2).map((project, idx) => {
         return (
           <FadeInWhenVisible key={idx} delay={project.delay}>
           <GlowCard
@@ -39,7 +45,7 @@ const FeaturedProjects = ({onProjectClick, onViewAllClick}) => (
                 <img 
                   src={project.imageUrl} 
                   alt={`${project.title} thumbnail`} 
-                  className="h-14 w-14 rounded-lg object-cover border border-gray-700/50 group-hover:scale-105 transition-transform duration-300"
+                  className="h-20 w-20 rounded-lg object-cover border border-gray-700/50 group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 

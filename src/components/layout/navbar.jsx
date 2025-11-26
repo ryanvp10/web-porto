@@ -21,8 +21,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
         <div 
           className="group flex cursor-pointer items-center gap-1 text-lg font-bold text-gray-100"
-          onClick={() => setActiveTab('home')}
-        >
+          onClick={() => setActiveTab('home')}>
           <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500/20 text-primary-400 transition-transform group-hover:scale-110">
              <Code size={18} />
           </div>
@@ -30,20 +29,22 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         </div>
 
         <div className="hidden md:flex space-x-1 rounded-full border border-gray-800 bg-gray-900/50 p-1 backdrop-blur-sm">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link) => {
+            const isActive = activeTab === link.id || (activeTab === 'project-detail' && link.id === 'projects');
+            return (
             <button
               key={link.id}
               onClick={() => setActiveTab(link.id)}
               className={`relative px-4 py-1.5 text-sm font-medium transition-colors duration-200 rounded-full cursor-pointer ${
-                activeTab === link.id ? 'text-white' : 'text-gray-400 hover:text-gray-200'
+                isActive ? 'text-white' : 'text-gray-400 hover:text-gray-200'
               }`}
             >
-              {activeTab === link.id && (
+              {isActive && (
                 <span className="absolute inset-0 -z-10 rounded-full bg-gray-800 shadow-inner" />
               )}
               {link.label}
             </button>
-          ))}
+          )})}
         </div>
 
         <div className="md:hidden">
@@ -56,7 +57,9 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       {isOpen && (
         <div className="animate-slide-down border-b border-gray-800 bg-black md:hidden">
           <div className="flex flex-col space-y-2 px-6 py-4">
-            {NAV_LINKS.map((link) => (
+            {NAV_LINKS.map((link) => {
+              const isActive = activeTab === link.id || (activeTab === 'project-detail' && link.id === 'projects');
+              return (
               <button
                 key={link.id}
                 onClick={() => {
@@ -64,12 +67,12 @@ const Navbar = ({ activeTab, setActiveTab }) => {
                   setIsOpen(false);
                 }}
                 className={`rounded-md px-3 py-2 text-left text-sm font-medium transition-colors ${
-                  activeTab === link.id ? 'bg-gray-800 text-white' : 'text-gray-400 hover:bg-gray-900 hover:text-gray-200'
+                  isActive ? 'bg-gray-800 text-white' : 'text-gray-400 hover:bg-gray-900 hover:text-gray-200'
                 }`}
               >
                 {link.label}
               </button>
-            ))}
+            )})}
           </div>
         </div>
       )}

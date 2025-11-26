@@ -7,34 +7,37 @@ export const NAV_LINKS = [
 
 export const PROJECTS = [
   {
-    slug: 'notion-clone',
-    title: 'Notion Clone',
-    description: 'A block-based note taking app with real-time collaboration features using WebSockets.',
-    longDescription: `This project is a full-featured clone of Notion, focusing on the block-based editing experience. 
-    
+    slug: 'recibot-app',
+    title: 'Recibot - Recipe Chatbot',
+    description: 'AI-powered chatbot that provides recipe suggestions and help you find the best recipes.',
+    longDescription: `This project is an AI-powered recipe chatbot that helps users find recipes based on ingredients they have at home.
+    the chatbot uses languange based on your mother languange to understand user queries and provide relevant recipe suggestions.
+
     Key features include:
-    • Real-time collaboration using Socket.io, allowing multiple users to edit the same document simultaneously.
-    • A recursive block architecture to support nested content (lists inside toggles, etc.).
-    • Drag-and-drop functionality for rearranging blocks.
-    • Slash commands for quickly inserting different block types.
-    
-    The backend is built with Node.js and Prisma, ensuring efficient data storage and retrieval.`,
-    tech: ['Next.js', 'Tailwind', 'Socket.io', 'Prisma'],
+    • Natural language processing to understand user queries.
+    • Integration with a recipe API to fetch recipe data.
+    • User-friendly chat interface built with React.
+    • With store near you and the up-to-date pricing.
+    • Deployed on Vercel for fast and reliable access.
+     The project showcases the use of modern web technologies and AI to create a useful tool for cooking enthusiasts.`,
+    tech: ['React', 'Tailwind', 'Socket.io', 'Prisma'],
     stars: '1.2k',
     imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Notion+Clone+Preview', 
     delay: '100ms'
   },
   {
-    slug: 'ecommerce-dashboard',
-    title: 'E-Commerce Dashboard',
-    description: 'Comprehensive analytics dashboard with dark mode, charts, and order management.',
-    longDescription: `A powerful dashboard designed for e-commerce store owners to track performance metrics in real-time.
+    slug: 'billbot',
+    title: 'BillBot - Split Bills Made Easy',
+    description: 'An app to simplify splitting bills among friends and family using AI and OCR technology.',
+    longDescription: `BillBot is a mobile application designed to make splitting bills among friends and family effortless.
     
-    The dashboard includes:
-    • Interactive charts using Recharts to visualize sales data, user growth, and revenue.
-    • A fully responsive datatable for order management with filtering and sorting.
-    • Light/Dark mode toggle using Tailwind CSS class strategies.
-    • Firebase authentication and Firestore for real-time data updates.`,
+    Key features include:
+    • User-friendly interface for adding expenses and participants.
+    • Automatic calculation of individual shares, including tax and tip.
+    • Expense history tracking for transparency.
+    • Multi-currency support for international use.
+    • Built with Kotlin for Android.
+    The app aims to eliminate the hassle of manual calculations and ensure everyone pays their fair share.`,
     tech: ['React', 'Vite', 'Recharts', 'Firebase'],
     stars: '843',
     imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Dashboard+Preview', 
@@ -73,17 +76,3 @@ export const PROJECTS = [
     delay: '400ms'
   }
 ];
-
-export const FOOTER_LINKS = {
-    general: [
-        { label: 'Home', href: '#' },
-        { label: 'Projects', href: '#' },
-        { label: 'About', href: '#' },
-        { label: 'Bucket List', href: '#' }
-    ],
-    website: [
-        { label: 'Attribution', href: '#' },
-        { label: 'Statistics', href: '#' },
-        { label: 'Analytics', href: '#' }
-    ]
-}
