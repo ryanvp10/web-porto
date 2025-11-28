@@ -4,12 +4,14 @@ const TechIcon = ({ name, className = 'w-6 h-6' }) => {
   // SVG paths for common technologies (simplified for inline use)
   const renderIcon = () => {
     switch (name) {
-      case 'Next.js':
+      case 'Kotlin':
         return (
-          // Next.js Logo
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${className} text-white`}>
-            <path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
-            <path fill="currentColor" d="M14.522 17.5l-2.522-4.37-2.522 4.37H6.967L12 8.783 17.033 17.5h-2.511zM12 11.666L9.673 15.68h4.654L12 11.666z"/>
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <g fill="none" fillRule="evenodd">
+              <path fill="#09D" d="M1.734 32l15.068-15.333 15.198 15.333z"/> {/* Dark Purple/Indigo half */}
+              <path fill="#09D" d="M0 0h16l-16 16.667z"/> {/* Orange/Red section */}
+              <path fill="#F80" d="M17.865 0l-17.865 18.667v13.333l32-32z"/> {/* Dark Blue triangle */}
+              </g>
           </svg>
         );
       case 'Tailwind':
@@ -41,11 +43,14 @@ const TechIcon = ({ name, className = 'w-6 h-6' }) => {
              <path fill="currentColor" d="M12.001 22.5l-3.33-5.772 3.33-3.33 3.33 3.33-3.33 5.772zm-3.33-5.772l-3.33-5.772 6.66-3.33 6.66 3.33-3.33 5.772h-6.66zm6.66-3.33l-3.33-3.33-3.33 3.33 6.66 3.33 3.33-3.33zm-3.33-3.33l3.33-3.33-3.33-5.772-3.33 5.772 3.33 3.33z"/>
            </svg>
         );
-      case 'Vercel':
+      case 'Vite': 
         return (
           // Vercel Logo (Triangle)
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${className} text-white`}>
-            <path fill="currentColor" d="M12 2L2 21h20L12 2z"/>
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" className={className}>
+            <path d="M29.8836 6.146L16.7418 29.6457c-.2714.4851-.9684.488-1.2439.0052L2.0956 6.1482c-.3-.5262.1498-1.1635.746-1.057l13.156 2.3516a.7144.7144 0 00.2537-.0004l12.8808-2.3478c.5942-.1083 1.0463.5241.7515 1.0513z" 
+                  fill="#9575CD" />
+            <path d="M22.2644 2.0069l-9.7253 1.9056a.3571.3571 0 00-.2879.3294l-.5982 10.1038c-.014.238.2045.4227.4367.3691l2.7077-.6248c.2534-.0585.4823.1647.4302.4194l-.8044 3.9393c-.0542.265.1947.4918.4536.4132l1.6724-.5082c.2593-.0787.5084.1487.4536.414l-1.2784 6.1877c-.08.387.4348.598.6495.2662L16.5173 25 24.442 9.1848c.1327-.2648-.096-.5667-.387-.5106l-2.787.5379c-.262.0505-.4848-.1934-.4109-.4497l1.8191-6.306c.074-.2568-.1496-.5009-.4118-.4495z" 
+                  fill="#FFEA83" />
           </svg>
         );
       // Fallback for less common/custom items

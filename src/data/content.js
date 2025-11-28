@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { label: 'Home', id: 'home' },
   { label: 'Projects', id: 'projects' },
   { label: 'About', id: 'about' },
-  { label: 'Bucket List', id: 'bucketlist' },
+  { label: 'Goals', id: 'goals' },
 ];
 
 export const PROJECTS = [
@@ -20,16 +20,15 @@ export const PROJECTS = [
     • With store near you and the up-to-date pricing.
     • Deployed on Vercel for fast and reliable access.
      The project showcases the use of modern web technologies and AI to create a useful tool for cooking enthusiasts.`,
-    tech: ['React', 'Tailwind', 'Socket.io', 'Prisma'],
-    stars: '1.2k',
+    tech: ['React', 'Tailwind', 'Vite', 'Prisma'],
     imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Notion+Clone+Preview', 
     delay: '100ms'
   },
   {
-    slug: 'billbot',
-    title: 'BillBot - Split Bills Made Easy',
+    slug: 'splitbill-app',
+    title: 'Split Bill - Split Bills Made Easy',
     description: 'An app to simplify splitting bills among friends and family using AI and OCR technology.',
-    longDescription: `BillBot is a mobile application designed to make splitting bills among friends and family effortless.
+    longDescription: `Split Bill is a mobile application designed to make splitting bills among friends and family effortless.
     
     Key features include:
     • User-friendly interface for adding expenses and participants.
@@ -38,41 +37,52 @@ export const PROJECTS = [
     • Multi-currency support for international use.
     • Built with Kotlin for Android.
     The app aims to eliminate the hassle of manual calculations and ensure everyone pays their fair share.`,
-    tech: ['React', 'Vite', 'Recharts', 'Firebase'],
-    stars: '843',
+    tech: ['Kotlin', 'Room', 'MaterialUI', 'Firebase'],
     imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Dashboard+Preview', 
     delay: '200ms'
   },
   {
-    slug: 'devportfolio-v2',
-    title: 'DevPortfolio v2',
-    description: 'The current website you are viewing. Built with performance and accessibility in mind.',
-    longDescription: `My personal portfolio website, designed to showcase my projects and writing.
-    
-    Technical highlights:
-    • Built with React and Vite for a lightning-fast development experience.
-    • Custom CSS animations for the "spotlight" card effects and smooth page transitions.
-    • Fully accessible components following WAI-ARIA guidelines.
-    • Dynamic routing simulation for a seamless single-page application feel.`,
-    tech: ['React', 'Tailwind', 'CSS Modules'],
-    stars: '2.1k',
+    slug: 'iOS Project',
+    title: 'Coming Soon: iOS App',
+    description: 'An exciting iOS application currently in development, aiming to revolutionize user experience on mobile devices.',
+    longDescription: 'this iOS application is being developed to provide users with an innovative and seamless experience on their mobile devices.',
+    tech: ['SwiftUI', 'Swift'],
     imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Portfolio+Preview', 
     delay: '300ms'
   },
   {
-    slug: 'opengraph-generator',
-    title: 'Open Graph Generator',
-    description: 'Serverless function to generate dynamic OG images for blog posts on the fly.',
-    longDescription: `A utility tool that automatically generates social media preview images (Open Graph images) for blog posts.
-    
-    How it works:
-    • It uses Puppeteer to render a React component into a headless Chrome instance.
-    • Takes query parameters (title, date, tags) to customize the image.
-    • Deployed as a Vercel Serverless Function for on-demand generation.
-    • Heavily cached to ensure fast load times for social media crawlers.`,
-    tech: ['TypeScript', 'Puppeteer', 'Vercel'],
-    stars: '320',
+    slug: 'Mini-Projects',
+    title: 'Coming Soon: Mini Projects Collection',
+    description: 'A collection of small-scale projects that demonstrate various programming concepts and technologies.',
+    longDescription: 'A collection of mini projects showcasing different programming concepts and technologies, designed to provide practical examples and learning opportunities for developers.',
+    tech: ['TypeScript', 'Next.js', 'Tailwind'],
     imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=OG+Generator+Preview', 
     delay: '400ms'
   }
+];
+
+export const ABOUTBRIEF = [
+  "Hi i'm Ryan. For the past five years, I have specialized in automation machine maintenance where I developed skill to troubleshooting complex systems and ensuring zero downtime in high-pressure environments which has impact to my problem-solving skills and attention to detail.",
+  "Now, I'm excited to transition into software development, bringing my analytical mindset and dedication to quality to create efficient and reliable applications. I'm passionate about learning new technologies and continuously improving my skills to deliver impactful solutions. Let's connect and explore how my unique blend of industrial experience and software skills can contribute to your team!"
+];
+
+export const SKILLS = [
+  {tech: ['React', 'Vite', 'Recharts', 'Firebase']}
+];
+
+export const BUCKET_LIST = [
+    { id: 1, item: "Work as a Software Engineer", done: false },
+    { id: 2, item: "Working remotely from anywhere", done: false },
+    { id: 3, item: "Visit Mekkah, Madinah, and Manchester", done: false },
+    { id: 4, item: "Buy original jersey Manchester United", done: false },
+    { id: 5, item: "Featured once in media", done: false },
+    { id: 6, item: "Buy a car", done: false },
+    { id: 7, item: "Live a month in Bali", done: false },
+    { id: 8, item: "Build web portfolio", done: true },
+    { id: 9, item: "Visit Labuan Bajo", done: false },
+    { id: 10, item: "Run a half-marathon", done: false },
+    { id: 11, item: "Visit Europe", done: false },
+    { id: 12, item: "Buy a Macbook and Iphone", done: false },
+    { id: 13, item: "Solve all easy LeetCode", done: false },
+    { id: 14, item: "Get certified CCP", done: false },
 ];

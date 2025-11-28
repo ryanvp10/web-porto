@@ -10,9 +10,10 @@ import GlowCard from './components/ui/glow-card';
 import ProjectDetail from './components/layout/projectdetail';
 import TechBadge from './components/ui/techbadge';
 // Data
-import { PROJECTS } from './data/content';
+import { ABOUTBRIEF, PROJECTS, SKILLS } from './data/content';
 import CustomCursor from './components/ui/custom-cursor';
 import FadeInWhenVisible from './components/ui/fadein';
+import Goals from './components/sections/goals';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -55,8 +56,8 @@ const App = () => {
         {activeTab === 'projects' && (
           <div key="projects" className="py-12 animate-fade-in">
             <h1 className="text-4xl font-bold text-white mb-8">All Projects</h1>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {[...PROJECTS, ...PROJECTS].map((project, idx) => (
+            <div className="grid gap-6 sm:grid-cols-2 cursor-pointer">
+              {[...PROJECTS].map((project, idx) => (
                 <FadeInWhenVisible key={idx} delay={`${idx * 100}ms`}>
                 <GlowCard key={idx} delay={`${idx * 100}ms`} onClick={()=> handleProjectClick(project)}
                     className="flex h-full flex-col hover:border-primary-500/30">
@@ -87,18 +88,19 @@ const App = () => {
            <div key="about" className="py-12 max-w-2xl mx-auto animate-fade-in">
             <h1 className="text-3xl font-bold text-white mb-8">About Me</h1>
             <div className="prose prose-invert prose-gray animate-fade-up text-gray-400">
-              <p className="text-lg text-gray-300 mb-6">
-                I'm Ryan Sapta, a developer who loves building things that live on the internet.
+              {ABOUTBRIEF.map((paragraph, index) => (
+              <p key={index} className="text-lg text-gray-300 mb-6">
+                {paragraph}
               </p>
-              <div className="my-8 p-4 rounded-lg bg-gray-900/50 border border-gray-800">
-                <h3 className="text-white font-semibold mb-4 flex items-center gap-2"><Cpu size={18}/> Tech Stack</h3>
+              ))}
+              <div className="my-8 p-3 rounded-lg bg-gray-900/50 border border-gray-800">
+                <h3 className="text-white text-[20px] font-semibold mb-4 flex items-center gap-2"><Cpu size={18}/> Tech Stack</h3>
                 <div className="grid grid-cols-2 gap-2 text-sm">
-                   <div>• JavaScript (ES6+)</div>
-                   <div>• React & Next.js</div>
-                   <div>• TypeScript</div>
-                   <div>• Node.js</div>
-                   <div>• PostgreSQL</div>
-                   <div>• AWS</div>
+                   <div className="flex gap-3">
+                       {SKILLS[0].tech.map((t) => (
+                          <TechBadge key={t} name={t} />
+                       ))}
+                     </div>
                 </div>
               </div>
             </div>
@@ -106,8 +108,14 @@ const App = () => {
         )}
 
         {/* You can create a similar component for Guestbook.jsx and import it */}
-        {activeTab === 'bucketlist' && (
-          <div className="text-center text-gray-400 py-20">Bucket List Component Here</div>
+        {activeTab === 'goals' && (
+          <div key="goals" className="py-8 animate-fade-in">
+                <h1 className="text-3xl font-bold text-white mb-6 border-b border-gray-700/50 pb-2">Bucket List</h1>
+                <p className="text-lg text-gray-400 mb-8">
+                    These are the list I want to achieve once in my life:
+                </p>
+                <Goals />
+                </div>
         )}
 
       </main>
