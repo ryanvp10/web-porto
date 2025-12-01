@@ -1,3 +1,5 @@
+import { Github, Twitter, Linkedin, Mail, Instagram } from 'lucide-react';
+
 export const NAV_LINKS = [
   { label: 'Home', id: 'home' },
   { label: 'Projects', id: 'projects' },
@@ -86,3 +88,10 @@ export const BUCKET_LIST = [
     { id: 13, item: "Solve all easy LeetCode", done: false },
     { id: 14, item: "Get certified CCP", done: false },
 ];
+
+export const SOCIALS = [
+  { label: Github, url: 'https://github.com/ryanvp10'},
+  { label: Linkedin, url: 'https://www.linkedin.com/in/ryansapta/'},
+  { label: Instagram , url: 'https://www.instagram.com/ryansapta_/'},
+  { label: Mail , url: 'mailto:ryansapta10@gmail.com'} 
+]

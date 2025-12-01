@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { Github, Twitter, Linkedin, Mail, ArrowUpRight, Instagram } from 'lucide-react';
+
+import { ArrowUpRight} from 'lucide-react';
+import { SOCIALS } from '../../data/content';
 
 const Hero = () => (
   <div className="animate-fade-in min-h-[calc(100vh-100px)] justify-center items-center text-center flex flex-col">  
@@ -14,18 +17,18 @@ const Hero = () => (
     </p>
 
     <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '200ms' }}>
-      <button className="cursor-pointer group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black transition-transform hover:scale-105 hover:bg-gray-200">
+      <button onClick={()=> window.open('https://drive.google.com/file/d/17AayKUaHQTomsnYww0jpH0Vw7iz0914E/view?usp=sharing','_blank')} className="cursor-pointer group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black transition-transform hover:scale-105 hover:bg-gray-200">
         <span>Download Resume</span>
         <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
       </button>
       
       <div className="flex items-center gap-4 px-4">
-        {[Github, Linkedin, Instagram, Mail].map((Icon, i) => (
+        {SOCIALS.map(({label : Icon, url}, i) => (
           <a 
             key={i} 
-            href="#" 
-            className="text-gray-400 transition-colors hover:text-primary-400 hover:scale-110 transform duration-200"
-          >
+            href={url}
+            target='_blank'
+            className="text-gray-400 transition-colors hover:text-primary-400 hover:scale-110 transform duration-200">
             <Icon size={22} />
           </a>
         ))}
