@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Cpu } from "lucide-react";
+import { Cpu, Award } from "lucide-react";
 
 // Components
 import Navbar from "./components/layout/navbar";
@@ -10,7 +10,7 @@ import GlowCard from "./components/ui/glow-card";
 import ProjectDetail from "./components/layout/projectdetail";
 import TechBadge from "./components/ui/techbadge";
 // Data
-import { ABOUTBRIEF, PROJECTS, SKILLS } from "./data/content";
+import { ABOUTBRIEF, PROJECTS, SKILLS, CERTIFICATIONS } from "./data/content";
 import CustomCursor from "./components/ui/custom-cursor";
 import FadeInWhenVisible from "./components/ui/fadein";
 import Goals from "./components/sections/goals";
@@ -135,6 +135,32 @@ const App = () => {
                       ))}
                     </div>
                   </div>
+                  
+                  <div className="my-8 p-3 rounded-lg bg-gray-900/50 border border-gray-800">
+            <h3 className="text-white text-[20px] font-semibold mb-4 flex items-center gap-2">
+              <Award size={18} /> Certifications
+            </h3>
+
+            <div className="flex gap-4 flex-wrap">
+              {CERTIFICATIONS.map((cert) => (
+                <a 
+                  key={cert.name}
+                  href={cert.link}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative flex items-center justify-center p-2 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-700"
+                  title={cert.name}
+                >
+                  <img 
+                    src={cert.image} 
+                    alt={cert.name} 
+                    className="w-20 h-20 object-contain transition-transform group-hover:scale-110"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+
                 </div>
               </div>
             </div>

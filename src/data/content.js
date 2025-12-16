@@ -72,6 +72,16 @@ export const SKILLS = [
   {tech: ['React', 'Vite', 'Recharts', 'Firebase']}
 ];
 
+export const CERTIFICATIONS = [
+  {
+    name: "AWS Certified Cloud Practitioner",
+    image: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png", // Replace with your actual image URL
+    link: "https://www.credly.com/badges/8c11b72a-85c6-40c4-b006-299873f02df3/public_url" // Replace with your public link
+  },
+  // Add more badges here
+];
+
+
 export const BUCKET_LIST = [
     { id: 1, item: "Work as a Software Engineer", done: false },
     { id: 2, item: "Working remotely from anywhere", done: false },

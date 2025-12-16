@@ -17,9 +17,9 @@ const Hero = () => (
     </p>
 
     <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '200ms' }}>
-      <button onClick={()=> window.open('https://drive.google.com/file/d/17AayKUaHQTomsnYww0jpH0Vw7iz0914E/view?usp=sharing','_blank')} className="cursor-pointer group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black transition-transform hover:scale-105 hover:bg-gray-200">
+      <button onClick={()=> window.open('https://drive.google.com/file/d/17AayKUaHQTomsnYww0jpH0Vw7iz0914E/view?usp=sharing','_blank')} className="cursor-pointer group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black transition-transform hover:scale-100 hover:bg-gray-200">
         <span>Download Resume</span>
-        <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+        <ArrowUpRight size={18} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
       </button>
       
       <div className="flex items-center gap-4 px-4">
