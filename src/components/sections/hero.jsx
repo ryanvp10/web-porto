@@ -12,8 +12,8 @@ const Hero = () => (
       > Ryan Sapta</span>
     </h1>
     <p className="mb-8 max-w-2xl text-lg leading-relaxed text-gray-400">
-      Software engineer, interface designer, and open-source enthusiast. 
-      I build accessible, pixel-perfect, and performant web experiences.
+      From automation machine maintenance to software development.<br></br>
+      Now crafting accessible, pixel-perfect, and performant web experiences.
     </p>
 
     <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '200ms' }}>

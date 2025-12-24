@@ -6,7 +6,7 @@ const ProjectDetail = ({ project, onBack }) => (
   <div className="py-12 animate-fade-in max-w-4xl mx-auto">
     <button 
       onClick={onBack} 
-      className="group mb-8 inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition-colors hover:text-primary-400"
+      className="cursor-pointer group mb-8 inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition-colors hover:text-primary-400"
     >
       <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
       Back to Projects
@@ -22,7 +22,7 @@ const ProjectDetail = ({ project, onBack }) => (
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
                 <h1 className="text-3xl sm:text-4xl font-bold text-white">{project.title}</h1>
                 <div className="flex gap-4">
-                    <button onClick={()=> window.open('https://drive.google.com/file/d/17AayKUaHQTomsnYww0jpH0Vw7iz0914E/view?usp=sharing','_blank')}  className="cursor-pointer flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-primary-400 transition-colors border border-gray-700 rounded-full px-4 py-2 hover:bg-gray-800">
+                    <button onClick={()=> window.open('https://github.com/ryanvp10/recibot-app','_blank')}  className="cursor-pointer flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-primary-400 transition-colors border border-gray-700 rounded-full px-4 py-2 hover:bg-gray-800">
                         <Github size={18}/> Repository
                     </button>
                     <button onClick={()=> window.open('https://drive.google.com/file/d/17AayKUaHQTomsnYww0jpH0Vw7iz0914E/view?usp=sharing','_blank')} className="cursor-pointer group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black transition-transform hover:scale-100 hover:bg-gray-200">

@@ -18,11 +18,11 @@ export const PROJECTS = [
     Key features include:
     • Natural language processing to understand user queries.
     • Integration with a recipe API to fetch recipe data.
-    • User-friendly chat interface built with React.
+    • User-friendly chat interface built with Next.js.
     • With store near you and the up-to-date pricing.
     • Deployed on Vercel for fast and reliable access.
      The project showcases the use of modern web technologies and AI to create a useful tool for cooking enthusiasts.`,
-    tech: ['React', 'Tailwind', 'Vite', 'Prisma'],
+    tech: ['Next.js', 'Tailwind', 'Vite', 'Prisma'],
     imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Notion+Clone+Preview', 
     delay: '100ms'
   },
@@ -69,7 +69,7 @@ export const ABOUTBRIEF = [
 ];
 
 export const SKILLS = [
-  {tech: ['React', 'Vite', 'Recharts', 'Firebase']}
+  {tech: ['React', 'Vite', 'Recharts', 'Firebase', 'Tailwind', 'Next.js']}
 ];
 
 export const CERTIFICATIONS = [
@@ -96,7 +96,7 @@ export const BUCKET_LIST = [
     { id: 11, item: "Visit Europe", done: false },
     { id: 12, item: "Buy a Macbook and Iphone", done: false },
     { id: 13, item: "Solve all easy LeetCode", done: false },
-    { id: 14, item: "Get certified CCP", done: false },
+    { id: 14, item: "Get certified CCP", done: true },
 ];
 
 export const SOCIALS = [
