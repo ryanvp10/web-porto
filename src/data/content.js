@@ -8,59 +8,59 @@ export const NAV_LINKS = [
 ];
 
 export const PROJECTS = [
-  {
-    slug: 'recibot-app',
-    title: 'Recibot - Recipe Chatbot',
-    description: 'AI-powered chatbot that provides recipe suggestions and help you find the best recipes.',
-    longDescription: `This project is an AI-powered recipe chatbot that helps users find recipes based on ingredients they have at home.
-    the chatbot uses languange based on your mother languange to understand user queries and provide relevant recipe suggestions.
+  // {
+  //   slug: 'recibot-app',
+  //   title: 'Recibot - Recipe Chatbot',
+  //   description: 'AI-powered chatbot that provides recipe suggestions and help you find the best recipes.',
+  //   longDescription: `This project is an AI-powered recipe chatbot that helps users find recipes based on ingredients they have at home.
+  //   the chatbot uses languange based on your mother languange to understand user queries and provide relevant recipe suggestions.
 
-    Key features include:
-    • Natural language processing to understand user queries.
-    • Integration with a recipe API to fetch recipe data.
-    • User-friendly chat interface built with Next.js.
-    • With store near you and the up-to-date pricing.
-    • Deployed on Vercel for fast and reliable access.
-     The project showcases the use of modern web technologies and AI to create a useful tool for cooking enthusiasts.`,
-    tech: ['Next.js', 'Tailwind', 'Vite', 'Prisma'],
-    imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Notion+Clone+Preview', 
-    delay: '100ms'
-  },
-  {
-    slug: 'splitbill-app',
-    title: 'Split Bill - Split Bills Made Easy',
-    description: 'An app to simplify splitting bills among friends and family using AI and OCR technology.',
-    longDescription: `Split Bill is a mobile application designed to make splitting bills among friends and family effortless.
+  //   Key features include:
+  //   • Natural language processing to understand user queries.
+  //   • Integration with a recipe API to fetch recipe data.
+  //   • User-friendly chat interface built with Next.js.
+  //   • With store near you and the up-to-date pricing.
+  //   • Deployed on Vercel for fast and reliable access.
+  //    The project showcases the use of modern web technologies and AI to create a useful tool for cooking enthusiasts.`,
+  //   tech: ['Next.js', 'Tailwind', 'Vite', 'Prisma'],
+  //   imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Notion+Clone+Preview', 
+  //   delay: '100ms'
+  // },
+  // {
+  //   slug: 'splitbill-app',
+  //   title: 'Split Bill - Split Bills Made Easy',
+  //   description: 'An app to simplify splitting bills among friends and family using AI and OCR technology.',
+  //   longDescription: `Split Bill is a mobile application designed to make splitting bills among friends and family effortless.
     
-    Key features include:
-    • User-friendly interface for adding expenses and participants.
-    • Automatic calculation of individual shares, including tax and tip.
-    • Expense history tracking for transparency.
-    • Multi-currency support for international use.
-    • Built with Kotlin for Android.
-    The app aims to eliminate the hassle of manual calculations and ensure everyone pays their fair share.`,
-    tech: ['Kotlin', 'Room', 'MaterialUI', 'Firebase'],
-    imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Dashboard+Preview', 
-    delay: '200ms'
-  },
-  {
-    slug: 'iOS Project',
-    title: 'Coming Soon: iOS App',
-    description: 'An exciting iOS application currently in development, aiming to revolutionize user experience on mobile devices.',
-    longDescription: 'this iOS application is being developed to provide users with an innovative and seamless experience on their mobile devices.',
-    tech: ['SwiftUI', 'Swift'],
-    imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Portfolio+Preview', 
-    delay: '300ms'
-  },
-  {
-    slug: 'Mini-Projects',
-    title: 'Coming Soon: Mini Projects Collection',
-    description: 'A collection of small-scale projects that demonstrate various programming concepts and technologies.',
-    longDescription: 'A collection of mini projects showcasing different programming concepts and technologies, designed to provide practical examples and learning opportunities for developers.',
-    tech: ['TypeScript', 'Next.js', 'Tailwind'],
-    imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=OG+Generator+Preview', 
-    delay: '400ms'
-  }
+  //   Key features include:
+  //   • User-friendly interface for adding expenses and participants.
+  //   • Automatic calculation of individual shares, including tax and tip.
+  //   • Expense history tracking for transparency.
+  //   • Multi-currency support for international use.
+  //   • Built with Kotlin for Android.
+  //   The app aims to eliminate the hassle of manual calculations and ensure everyone pays their fair share.`,
+  //   tech: ['Kotlin', 'Room', 'MaterialUI', 'Firebase'],
+  //   imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Dashboard+Preview', 
+  //   delay: '200ms'
+  // },
+  // {
+  //   slug: 'iOS Project',
+  //   title: 'Coming Soon: iOS App',
+  //   description: 'An exciting iOS application currently in development, aiming to revolutionize user experience on mobile devices.',
+  //   longDescription: 'this iOS application is being developed to provide users with an innovative and seamless experience on their mobile devices.',
+  //   tech: ['SwiftUI', 'Swift'],
+  //   imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=Portfolio+Preview', 
+  //   delay: '300ms'
+  // },
+  // {
+  //   slug: 'Mini-Projects',
+  //   title: 'Coming Soon: Mini Projects Collection',
+  //   description: 'A collection of small-scale projects that demonstrate various programming concepts and technologies.',
+  //   longDescription: 'A collection of mini projects showcasing different programming concepts and technologies, designed to provide practical examples and learning opportunities for developers.',
+  //   tech: ['TypeScript', 'Next.js', 'Tailwind'],
+  //   imageUrl: 'https://via.placeholder.com/600x300/1E293B/E2E8F0?text=OG+Generator+Preview', 
+  //   delay: '400ms'
+  // }
 ];
 
 export const ABOUTBRIEF = [
